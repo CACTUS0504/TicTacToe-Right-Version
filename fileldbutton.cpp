@@ -1,0 +1,6 @@
+
+
+FileldButton::FileldButton() : QPushButton()
+{
+
+}
