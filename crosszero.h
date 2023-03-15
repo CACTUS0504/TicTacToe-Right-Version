@@ -9,14 +9,16 @@ class CrossZero : public QWidget
     Q_OBJECT
 private:
     int cnt;
-    QGridLayout* fieldLayout;
-    QPushButton* buttons[3][3];
+    QVector<QVector<QString>> buttons;
 public:
     explicit CrossZero(QWidget *parent = nullptr);
     QString end();
-
-public slots:
-    void slotButtonClicked();
+    void setButton(int i, int j, QString text);
+    QVector<QVector<QString>> getButtons();
+    void resizeMapButtons();
+    int getCnt();
+    void setCnt(int val);
+    void resetButtons();
 };
 
 #endif
